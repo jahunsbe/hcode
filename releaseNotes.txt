@@ -18,19 +18,61 @@
 =====================================
 Hardware Image Official Release Notes
 =====================================
-Level: hw020118.910
+Level: hw0030918a.910
 Included Commits:
-cc39fc9 - Richard J. Knight,5 months ago : p9_xip_tool support for DD level section parsing
-7a76c05 - Louis Stermole,3 weeks ago : Add Vreg==1 trigger to DLL workaround
-edc30b5 - Sharath Manjunath,2 weeks ago : Add HTX Error log check to qual code
-49906b8 - Gebhard Weber,3 weeks ago : Added -r run flag
-4db3906 - Soma BhanuTej,2 weeks ago : Update p9a engd level to o10_e9008_tp007_ec010_chip_sc_u306_01
-ea9d1c2 - Anusha Reddy Rangareddygari,3 weeks ago : p9_setup_sbe_config
-49b8e3d - Abhishek Agarwal,4 weeks ago : Update model_boot, run_script_soa and facs to support
-53cac74 - Raja Das,5 weeks ago : PPE empty PK FFDC handler to save-off required registers
-f453865 - Sharath Manjunath,3 weeks ago : Add "End of Test Processing" banner to qual code end_of_tc
-6f82839 - Luke C. Murray,3 weeks ago : NCU initfile - turn off 8 to 1 tlbie filtering
+365e711 - Amit Tendolkar, 3 weeks ago : Update p9_collect_ppe_state to dynamically collect PPE FFDC
+5bd3235 - Greg Still, 11 days ago : PM:  clear CPMM Error register special wake-up protocol bits on hostboot core
+c8fb119 - Rahul Batra, 10 days ago : WOF: WOF Phase 2 Vindex Rounding Fix
+25985e9 - Yue Du, 10 days ago : STOP: Fix Special Wakeup from Stop4+ when another core exit stop2
+3dd9f80 - Yue Du, 11 days ago : STOP: Fix Data Machine Check with PLS Fix
+9ac1dd5 - aravnair-in, 12 days ago : Fix a couple of EKB files to prevent CMVC quirk
+13a1a5f - Yue Du, 2 weeks ago : STOP: Support Suspend Entry/Exit and Fix Pig Collision
+f32dd76 - Claus Michael Olsen, 3 weeks ago : Update to putRingUtils to proper scanning of perv_pll_bndy_flt rings
+46c42b6 - Yue Du, 3 weeks ago : STOP: Fix NDD20 dual cast workaround lose second core wakeup
+41b1f2a - Ben Gass, 4 weeks ago : Add support for p9c 1.2
+43798f7 - Yue Du, 5 weeks ago : STOP: Abort Entry on Error
+28ead17 - Yue Du, 4 weeks ago : STOP: Fix window on partial bad EX regional Fence during arrayinit
+0fad3e2 - Rahul Batra, 3 weeks ago : WOF: Fix WOF Phase1 Initial activeQuad+Cores(STOP11 only)
+72f01a4 - Claus Michael Olsen, 5 weeks ago : Additional risk level support - (step 2) Updating the image w/RL2
+b201a69 - Yue Du, 4 weeks ago : STOP: Fix Block Wakeup Mode with Catchup and Abort cases
+a092c76 - Luke C. Murray, 4 weeks ago : Updating NCU tlbie pacing dials
+2697cfd - Ben Gass, 3 months ago : Re-submit Axone updates
+51d00c4 - Rahul Batra, 4 weeks ago : WOF: Clear OCCLFG[30] when ACKing WOF_VFRT
+2dd6296 - Claus Michael Olsen, 4 weeks ago : Bug fix to TOR API to not check TOR header version against TOR_VERSION
+837ba9b - Rahul Batra, 4 weeks ago : PSTATE: Remove Already ON/OFF PGPE-OCC IPC Error RC
+9dcff54 - Yue Du, 5 weeks ago : STOP: Block Wakeup Mode Fixes for Phyp
+3d70e91 - Claus Michael Olsen, 4 weeks ago : Fix to TOR API failure on 32b systems
+ac2d955 - Michael Floyd, 4 weeks ago : CME Size Reduction Fixes
+84cd569 - Prasad Bg Ranganath, 5 weeks ago : PM: Fix Global Parameter Block and PGPE size checks in p9_hcode_image_build
+af68d0d - Yue Du, 6 weeks ago : STOP: Always disable AUTO-SPWU upon CME Boot
+0f2f59b - Prem Shanker Jha, 4 months ago : PM: Generation of summarized version  of STOP Recovery FFDC.
+59152f0 - Yue Du, 9 weeks ago : STOP: Fix Phantom PCWU causing CME IOTA to halt
+ff02e57 - Claus Michael Olsen, 7 weeks ago : Additional risk level support - (step 1) Backward compatibility
+76d506f - Yue Du, 9 weeks ago : STOP: Fix SGPE stop servicing wakeups
+3821620 - Michael Floyd, 5 weeks ago : CME Code Size Reduction ATTEMPT#3
+f0808f1 - Rahul Batra, 7 weeks ago : PGPE: WOF Fix Pack
+688a90d - Claus Michael Olsen, 10 weeks ago : Moving DD specific ring coord from TOR to XIP (step 2)
+cdaed48 - Greg Still, 6 weeks ago : WOF:  Pass PGPE VPD IQ good normal core per sort for WOF Phase 2
+b0d37e9 - Joe McGill, 8 weeks ago : update OBUS PLL buckets for p9n dd22, p9c dd11
+d3a2007 - Yue Du, 6 weeks ago : STOP: Update STOP History with Stop8 for Srr1 state loss reporting
+6ef1b75 - Rahul Batra, 7 weeks ago : PGPE: Core Throttle Fix
+d1dc07c - Sumit Kumar, 8 months ago : Moving DD specific ring coord from TOR to XIP (step 1)
+b461f04 - Greg Still, 8 weeks ago : WOF/Pstates:  HOMER VFRT rounding fix and Safe Mode Freq -> Pstate fix
+9f050b7 - Brian Vanderpool, 7 weeks ago : PM: Read CME_LCL_FLAGS before performing analog update.
+47d44e6 - Yue Du, 9 weeks ago : STOP: Fix PLS deepest when stop4+ due to self restore wakeup
+e3efd24 - Rahul Batra, 3 months ago : PM: VDM Prolonged Droop Fix
+5fda3a8 - Rahul Batra, 8 weeks ago : PGPE: Pmax > Psafe check
+48d3907 - Raja Das, 9 weeks ago : Register FFDC call is handled within machine_check_handler
+a100898 - Rahul Batra, 9 weeks ago : WOF: WOF Phase1 Vindex fix
+b7083f1 - Greg Still, 10 weeks ago : PM:  OCC Pstate Parm Block comments for minimum frequency and Pstate being safe
+88ae491 - Rahul Batra, 8 weeks ago : PGPE: Intermittent Local Pstate Rollback Fix
+2d0455c - Rahul Batra, 9 weeks ago : PGPE: Open DPLL to Ext. SCOMs upon Pstate Stop
+2d02e0a - Claus Michael Olsen, 2 months ago : xip_customize and TOR API: Improved DD level verification
+cad04e7 - Claus Michael Olsen, 9 weeks ago : p9_dd_container: Introducing DD container API lib to PPE repo
+95afa2d - Brian Vanderpool, 10 weeks ago : Change CME BCE reads to always use VG scope.
+7212a34 - Rahul Batra, 3 months ago : PGPE: Fix FIT and actuation step conflict
+4d6df04 - Rahul Batra, 4 months ago : CME: Fix resclk stepping of L2 grid during CME Boot
 
 
-p9n.hw.overlays.bin	Checksum: 9f17c9234d3ba525c3ede1712dacef1e
-p9n.hw.rings.bin	Checksum: 8dfc85ba73b57a9e2d59f461440f3864
+p9n.hw.overlays.bin	Checksum: 99ffebfab3d5a67c31997b9c03f12672
+p9n.hw.rings.bin	Checksum: f78ca227d4af59c762783dfbbad8dedd
